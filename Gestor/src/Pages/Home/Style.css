@@ -1,7 +1,9 @@
 .home {
+    flex-direction: column;
+    position: relative;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: start;
     background-color: rgb(255, 255, 255);
     max-width: 100%;
     height: 100vh;
@@ -10,34 +12,38 @@
 
 header {
     display: flex;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.418);
     position: relative;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 120px;
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(194, 194, 194);
     border-radius: 0px 0px 10px 10px;
 
 
 }
 
 .boxheader {
+    border-left: 1px solid white;
     position: absolute;
     right: 0px;
-    width: 800px;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 0px 0px 10px 0px;
     height: 100%;
-    gap: 10px;
-    background-color: blueviolet;
+
+    background-color: rgb(202, 202, 202);
 
     & ul {
         list-style: none;
-        gap: 200px;
+        gap: 30px;
+
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
+
 
         & li {
             cursor: pointer;
@@ -45,13 +51,152 @@ header {
     }
 }
 
+.logo {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    left: 20px;
+    border-radius: 10px;
+
+
+    & img {
+        width: 10%;
+        height: 60%;
+    }
+
+    & h2 {
+        font-size: 20px;
+    }
+}
+
+.boxfund {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(179, 179, 179);
+}
+
+.boxproduct {
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(194, 194, 194);
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+.productviw {
+    gap: 40px;
+    position: relative;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.418);
+    width: 99%;
+    height: 150px;
+    background-color: rgb(245, 245, 245);
+}
+
+.ACTION {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+    position: absolute;
+    right: 0px;
+    width: 40%;
+    height: 80%;
+    background-color: blue;
+}
+
+.boxsale {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(68, 68, 68);
+}
+
+.qnt {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 70%;
+    background-color: rgba(119, 119, 119, 0);
+    border: none;
+
+
+    & svg {
+        cursor: pointer;
+    }
+}
+
+.rem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 70%;
+    background-color: rgba(119, 119, 119, 0);
+    border: none;
+
+    & svg {
+        cursor: pointer;
+    }
+}
 
 
 
-@media (max-width:790px) {}
+@media (max-width:600px) {
+    .home {
+        display: none;
+    }
+}
 
 @media (max-width:1200px) {
     header {
         height: 100px;
     }
+
+    .productviw {
+        font-size: 6px;
+    }
+
 }
